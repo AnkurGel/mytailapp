@@ -20,7 +20,8 @@ task :tail_follow, :environment do
     tail_read = File.read(file).split("\n")
     change = tail_read[-(tail_read.size - initial_read.size)..tail_read.size].join("\n")
     initial_read = tail_read
-    Net::HTTP.post_form(uri, :message => {channel: "/messages/new", data: change}.to_json )
+    Net::HTTP.post_form(uri,
+                        message: { channel: "/messages/new", data: change }.to_json)
   end
   notifier.run
 
