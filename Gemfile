@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 gem 'haml-rails'
 #gem 'websocket-rails'
 gem 'rb-inotify'
+gem 'faye'
 
 gem 'sass-rails', '~> 4.0.0'
 
